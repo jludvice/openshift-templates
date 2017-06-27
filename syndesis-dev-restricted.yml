@@ -671,14 +671,15 @@ objects:
           imagePullPolicy: IfNotPresent
           livenessProbe:
             httpGet:
-              path: "/auth/"
+              path: "/auth"
               port: 8080
             timeoutSeconds: 5
+            initialDelaySeconds: 180
           readinessProbe:
             httpGet:
-              path: "/auth/"
+              path: "/auth"
               port: 8080
-            initialDelaySeconds: 15
+            initialDelaySeconds: 180
             timeoutSeconds: 5
           ports:
           - containerPort: 8080

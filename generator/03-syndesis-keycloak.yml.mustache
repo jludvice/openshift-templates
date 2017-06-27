@@ -174,12 +174,12 @@
 {{^Probeless}}
           livenessProbe:
             httpGet:
-              path: "/auth/"
+              path: "/auth"
               port: 8080
             timeoutSeconds: 5
           readinessProbe:
             httpGet:
-              path: "/auth/"
+              path: "/auth"
               port: 8080
             initialDelaySeconds: 15
             timeoutSeconds: 5{{/Probeless}}
